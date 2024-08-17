@@ -1,5 +1,7 @@
 "use client";
 
+import React from 'react';
+
 import { useEffect, useRef, useState } from "react";
 
 import { cn } from "@/lib/utils";
@@ -12,11 +14,14 @@ function Beam({ index }: { index: number }) {
                 "[--duration:7s]": flag,
                 "[--duration:11s]": !flag,
             })}
-            style={{
-                width: "6px",
-                transform: "translateY(-20%)",
-                "--delay": `${index * 0.5}s`,
-            }}
+           
+                style={{
+                    width: "6px",
+                    transform: "translateY(-20%)",
+                    "--delay": `${index * 0.5}s`
+                } as React.CSSProperties}
+            
+            
         >
             <div
                 style={{
